@@ -1,0 +1,33 @@
+{
+  "name": "kth-node-cache",
+  "version": "1.0.0",
+  "description": "A Node.js module with a simple configurable cache mechanism.",
+  "private": true,
+  "files": [
+    "index.js",
+    "redis-cache.js"
+  ],
+  "scripts": {
+    "test": "tape test/**/*test.js | tap-spec",
+    "codecheck": "standard",
+    "preversion": "npm run codecheck && npm run test",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KTH/kth-node-cache"
+  },
+  "keywords": [
+    "node",
+    "cache"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "kth-node-log": "https://github.com/KTH/kth-node-log.git#v1.0.0",
+    "kth-redis": "https://github.com/KTH/kth-node-redis.git#v1.0.0",
+    "sinon": "1.17.4",
+    "standard": "7.1.1",
+    "tap-spec": "4.1.1",
+    "tape": "4.5.1"
+  }
+}
